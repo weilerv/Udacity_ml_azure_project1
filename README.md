@@ -14,14 +14,14 @@ This model is then compared to an Azure AutoML run.
 
 ## Summary
 **In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
-
+This dataset contains data about bank costumers and  we seek to predict if a client will subscribe to a bank deposit or not.
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
 
 **What are the benefits of the parameter sampler you chose?**
-
+It covers both hyperparameters we can set and it has no too much options so don't use much capacity.
 **What are the benefits of the early stopping policy you chose?**
 
 ## AutoML
