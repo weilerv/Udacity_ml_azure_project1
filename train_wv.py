@@ -1,5 +1,7 @@
-from sklearn.linear_model import LogisticRegression
 import argparse
+import sklearn
+from sklearn.linear_model import LogisticRegression
+#import argparse
 import os
 import numpy as np
 from sklearn.metrics import mean_squared_error
@@ -48,8 +50,8 @@ def main():
 
     run = Run.get_context()
 
-    run.log("Regularization Strength:", np.float(args.C))
-    run.log("Max iterations:", np.int(args.max_iter))
+    run.log("Regularization Strength:", float(args.C))
+    run.log("Max iterations:", int(args.max_iter))
 
     # TODO: Create TabularDataset using TabularDatasetFactory
     # Data is located at:
@@ -67,11 +69,11 @@ def main():
 
     accuracy = model.score(x_test, y_test)
 
+    run.log("Accuracy", float(accuracy))
+
     #save the model
     os.makedirs('outputs', exist_ok=True)
     joblib.dump(model, 'outputs/model.joblib')
-
-    run.log("Accuracy", np.float(accuracy))
 
 if __name__ == '__main__':
     main()
