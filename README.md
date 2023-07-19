@@ -37,3 +37,39 @@ I chose the Bandit policy bc it terminates a run when the evaluation metric does
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
 **Image of cluster marked for deletion**
+
+{
+    "class_name": "XGBoostClassifier",
+    "module": "automl.client.core.common.model_wrappers",
+    "param_args": [],
+    "param_kwargs": {
+        "booster": "gbtree",
+        "colsample_bytree": 1,
+        "eta": 0.05,
+        "gamma": 0,
+        "max_depth": 6,
+        "max_leaves": 0,
+        "n_estimators": 200,
+        "objective": "reg:logistic",
+        "reg_alpha": 0.625,
+        "reg_lambda": 0.8333333333333334,
+        "subsample": 0.8,
+        "tree_method": "auto"
+    },
+    "prepared_kwargs": {},
+    "spec_class": "sklearn"
+}
+
+{
+    "class_name": "StandardScaler",
+    "module": "sklearn.preprocessing",
+    "param_args": [],
+    "param_kwargs": {
+        "with_mean": false,
+        "with_std": false
+    },
+    "prepared_kwargs": {},
+    "spec_class": "preproc"
+}
+
+Ensemble weight: 0.07692307692307693
